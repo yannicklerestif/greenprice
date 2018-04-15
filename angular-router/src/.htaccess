@@ -1,0 +1,7 @@
+# html5mode: Rewriting URLs so that all pages redirect to index.html
+RewriteEngine on
+# Don't rewrite files
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^ - [L]
+# Rewrite everything else to index.html to allow html5 state links
+RewriteRule ^ index.html [L]
